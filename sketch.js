@@ -34,12 +34,9 @@ class Circle {
     this.col = col;
 
 
-    // this.colorA = color(random(360), 100, 100);
-    // this.colorB = color(random(360), 150, 100);
-    // this.colorC = color(random(360), 150, 100);
-    // this.colorD = color(random(360), 100, 100);
-    // this.colorF = color(random(360), 100, 100);
-    // this.colorE = color(random(360), 50, 100);
+    this.colorA = color(177,77,114);
+    this.colorB = color(random(360), 150, 100);
+    
   }
 
   display() {
@@ -55,9 +52,20 @@ class Circle {
       for (let i = 0; i < PI * 2; i += PI / 30) {
         let px = this.x + l * cos(i);
         let py = this.y + l * sin(i);
-        
-        circle(px,py,1);
+
+        circle(px, py, 1);
       }
+    }
+
+    noStroke()
+    for (let i = 6; i >= 0; i--) {
+
+      if (i % 2 == 0) {
+        fill(this.colorA)
+      } else {
+        fill(this.colorB)
+      }
+      ellipse(this.x, this.y, this.r * 0.2 * i * this.rate)
     }
 
   }
