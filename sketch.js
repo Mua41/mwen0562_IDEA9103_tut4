@@ -48,6 +48,18 @@ class Circle {
     fill(this.col);
     ellipse(this.x, this.y, this.r * 2 * this.rate, this.r * 2 * this.rate);
 
+    stroke(255)
+    strokeWeight(this.rate)
+    for (let i = 0; i < 3; i++) {
+      let l = this.r * 0.7 * this.rate + this.r * 0.1 * i * this.rate;
+      for (let i = 0; i < PI * 2; i += PI / 30) {
+        let px = this.x + l * cos(i);
+        let py = this.y + l * sin(i);
+        
+        circle(px,py,1);
+      }
+    }
+
   }
 
 
