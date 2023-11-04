@@ -1,5 +1,5 @@
 let circles = [];
-let gap = 90;
+let gap = 80;
 
 function setup() {
 
@@ -23,7 +23,7 @@ function draw() {
 
   for (let circle of circles) {
     circle.display();
-    circle.rate = 0.5 + 1.1 * noise(circle.x * 0.01, circle.y * 0.01, frameCount * 0.1);
+    circle.rate = 0.5 + 0.9 * noise(circle.x * 0.01, circle.y * 0.01, frameCount * 0.1);
   }
 
 }
