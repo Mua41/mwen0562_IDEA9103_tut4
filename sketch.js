@@ -2,7 +2,7 @@ let circles = [];
 
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
   background(200,150,60);
 
@@ -21,9 +21,6 @@ function setup() {
 }
 
 function draw() {
-
-  translate(-200,-100);
-  rotate(50);
 
   for (let circle of circles) {
     circle.display();
